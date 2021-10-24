@@ -1,0 +1,29 @@
+.post-show-container {
+  background-image: asset_url('blue-snow');
+  height: 100%;
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(68, 153, 72);
+    border-radius: 10px;
+  }
+}
+
+.post-show-title {
+padding: 1em;
+text-align: center;
+}
+
+.comment-form-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  padding: 8px;
+}
+
+.comment-form {
+  width: 100%;
+}

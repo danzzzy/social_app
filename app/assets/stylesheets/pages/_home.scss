@@ -1,1 +1,50 @@
-// Specific CSS for your home-page
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  background-image: asset_url('blue-snow');
+}
+
+.home-title-container {
+  margin: 7em 2em 2em 2em;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.home-btn-container {
+  margin-top: 5em;
+}
+
+.home-subtitle-container {
+  margin: 2em;
+}
+
+.home-subtitle-container {
+  ul {
+    list-style-type: none;
+  }
+}
+
+.home-subtitle-container {
+  ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+
+  }
+}
+
+  .home-img {
+    display: flex;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+}

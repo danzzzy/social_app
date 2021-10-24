@@ -1,0 +1,7 @@
+<div class="post-container" id="post-<%= post.id %>">
+  <i class="author">
+    <span><%= post.user.first_name %></span>
+    <small><%= post.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+  </i>
+  <p><%= post.post %></p>
+</div>

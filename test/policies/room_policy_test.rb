@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ChatroomPolicyTest < ActiveSupport::TestCase
+class RoomPolicyTest < ActiveSupport::TestCase
   def test_scope
   end
 

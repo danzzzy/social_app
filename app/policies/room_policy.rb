@@ -1,4 +1,4 @@
-class ChatroomPolicy < ApplicationPolicy
+class RoomPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all

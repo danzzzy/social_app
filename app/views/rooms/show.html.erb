@@ -1,2 +1,14 @@
-<h1>Chatroom#show</h1>
-<p>Find me in app/views/chatroom/show.html.erb</p>
+<div class="room-show-container">
+  <div class="room-show-title">
+    <h3><%= @room.name %></h3>
+  </div>
+  <div id="posts" data-room-id="<%= @room.id %>">
+    <% @room.posts.each do |post| %>
+    <%= render 'posts/post', post: post %>
+    <% end %>
+  </div>
+  <%= simple_form_for [ @room, @post ], remote: true do |f| %>
+    <%= f.input :post, label: false, placeholder: "Create Your Post" %>
+    <%= f.button :submit, "Submit" %>
+  <% end %>
+</div>

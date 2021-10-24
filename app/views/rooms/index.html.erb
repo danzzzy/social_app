@@ -1,2 +1,12 @@
-<h1>Chatroom#index</h1>
-<p>Find me in app/views/chatroom/index.html.erb</p>
+<div class="room-background">
+  <h3 class="room-title">Find Your Room</h3>
+  <div class="room-container">
+    <div class="room-grid">
+      <% @rooms.each do |room| %>
+        <%= link_to room_path(room) do %>
+            <p class="room-box"><%= room.name %></p>
+        <% end %>
+      <% end  %>
+    </div>
+  </div>
+</div>

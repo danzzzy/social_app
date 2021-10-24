@@ -7,8 +7,12 @@
     <%= render 'posts/post', post: post %>
     <% end %>
   </div>
-  <%= simple_form_for [ @room, @post ], remote: true do |f| %>
-    <%= f.input :post, label: false, placeholder: "Create Your Post" %>
-    <%= f.button :submit, "Submit" %>
-  <% end %>
+  <div class="post-form-container">
+    <div class="post-form">
+      <%= simple_form_for [ @room, @post ], remote: true do |f| %>
+        <%= f.input :post, label: false, placeholder: "Create Your Post" %>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>
 </div>

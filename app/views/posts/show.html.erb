@@ -1,0 +1,22 @@
+<div class="post-show-container">
+  <div class="post-show-title">
+    <div class="author">
+      <span><%= @post.user.first_name %></span>
+      <br><small><%= @post.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+      <p><%= @post.post %></p>
+    </div>
+  </div>
+  <div id="comments" data-comment-id="<%= @post.id %>">
+    <% @post.comments.each do |comment| %>
+      <%= comment %>
+    <% end %>
+  </div>
+  <div class="comment-form-container">
+    <div class="comment-form">
+      <%= simple_form_for @comment, url: room_post_path, remote: true do |f| %>
+        <%= f.input :comment, label: false, placeholder: "Comment" %>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

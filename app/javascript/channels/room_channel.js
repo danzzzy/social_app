@@ -8,7 +8,7 @@ const initChatroomCable = () => {
     consumer.subscriptions.create({ channel: "RoomChannel", id: id }, {
       received(data) {
         // console.log(data)
-        postsContainer.insertAdjacentHTML('beforeend', data);
+        postsContainer.insertAdjacentHTML('afterbegin', data);
       }
     });
   }
